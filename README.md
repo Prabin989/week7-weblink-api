@@ -62,6 +62,52 @@ chmod +x test-api.sh
 ./test-api.sh
 ```
 
+## Postman Cheat Sheet
+
+Copy and paste these directly into Postman to perform the actions required for your screencast.
+
+### 1. Show All Weblinks
+- **Method:** `GET`
+- **URL:** `http://localhost:3000/api/weblink`
+
+### 2. Add New Weblink
+- **Method:** `POST`
+- **URL:** `http://localhost:3000/api/weblink`
+- **Body (raw JSON):**
+```json
+{
+  "title": "DuckDuckGo",
+  "url": "https://duckduckgo.com",
+  "rating": 4
+}
+```
+
+### 3. Read Specific Weblink
+- **Method:** `GET`
+- **URL:** `http://localhost:3000/api/weblink/6`
+
+### 4. Update a Weblink
+- **Method:** `PUT`
+- **URL:** `http://localhost:3000/api/weblink/6`
+- **Body (raw JSON):**
+```json
+{
+  "rating": 5
+}
+```
+
+### 5. Delete a Weblink
+- **Method:** `DELETE`
+- **URL:** `http://localhost:3000/api/weblink/1`
+
+### 6. Display Weblinks by Rating
+- **Method:** `GET`
+- **URL:** `http://localhost:3000/api/weblink/rating/5`
+
+### 7. Display .com Weblinks
+- **Method:** `GET`
+- **URL:** `http://localhost:3000/api/weblink/filter/com`
+
 ## Project Structure
 - index.js: The main server file containing all the logic.
 - apidoc.json: Configuration for the documentation generator.
